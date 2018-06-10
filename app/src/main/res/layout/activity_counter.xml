@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/linearLayout"
+    android:id="@+id/ConstraintLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -11,7 +10,8 @@
         android:layout_width="103dp"
         android:layout_height="56dp"
         android:layout_marginTop="188dp"
-        android:text="2 Points"
+        android:text="@string/twoPoints"
+        android:onClick="twoPoints"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.209"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,67 +21,103 @@
         android:id="@+id/twoPntsB"
         android:layout_width="103dp"
         android:layout_height="56dp"
+        android:layout_marginBottom="264dp"
         android:layout_marginEnd="64dp"
+        android:layout_marginLeft="55dp"
         android:layout_marginRight="64dp"
-        android:layout_marginTop="38dp"
-        android:text="2 Points"
+        android:layout_marginStart="55dp"
+        android:text="@string/twoPoints"
+        android:onClick="twoPointsB"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/opponentB" />
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/twoPntsA" />
 
     <Button
         android:id="@+id/threePntsA"
         android:layout_width="103dp"
         android:layout_height="56dp"
-        android:layout_marginTop="22dp"
-        android:text="3 Points"
-        app:layout_constraintTop_toBottomOf="@+id/twoPntsA"
-        tools:layout_editor_absoluteX="59dp" />
+        android:layout_marginBottom="26dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="270dp"
+        android:text="@string/threePoints"
+        android:onClick="threePoints"
+        app:layout_constraintBottom_toTopOf="@+id/freeThrwA"
+        app:layout_constraintEnd_toStartOf="@+id/threePntsB"
+        app:layout_constraintHorizontal_bias="0.142"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/threePntsB"
         android:layout_width="103dp"
         android:layout_height="56dp"
-        android:layout_marginTop="22dp"
-        android:text="3 Points"
-        app:layout_constraintTop_toBottomOf="@+id/twoPntsB"
-        tools:layout_editor_absoluteX="216dp" />
-
-    <TextView
-        android:id="@+id/opponentA"
-        android:layout_width="72dp"
-        android:layout_height="48dp"
-        android:text="0"
-        android:textSize="32sp"
-        app:layout_constrainedWidth="true"
-        tools:layout_editor_absoluteX="83dp"
-        tools:layout_editor_absoluteY="102dp" />
+        android:layout_marginLeft="52dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="24dp"
+        android:onClick="threePointsB"
+        android:text="@string/threePoints"
+        app:layout_constraintStart_toEndOf="@+id/threePntsA"
+        app:layout_constraintTop_toBottomOf="@+id/twoPntsB" />
 
     <TextView
         android:id="@+id/opponentB"
         android:layout_width="72dp"
         android:layout_height="48dp"
-        android:text="0"
+        android:layout_marginBottom="32dp"
+        android:layout_marginEnd="88dp"
+        android:layout_marginRight="88dp"
+        android:text="@string/freeThrow"
         android:textSize="32sp"
-        tools:layout_editor_absoluteX="233dp"
-        tools:layout_editor_absoluteY="102dp" />
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toTopOf="@+id/twoPntsA"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/freeThrwA"
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/freeThrwA"
         android:layout_width="103dp"
         android:layout_height="56dp"
+        android:layout_marginLeft="55dp"
+        android:layout_marginStart="55dp"
         android:layout_marginTop="26dp"
-        android:text="Free Throw"
-        app:layout_constraintTop_toBottomOf="@+id/threePntsA"
-        tools:layout_editor_absoluteX="59dp" />
+        android:onClick="freethrow"
+        android:text="@string/freeThroww"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/threePntsA" />
 
     <Button
         android:id="@+id/freeThrwB"
         android:layout_width="103dp"
         android:layout_height="56dp"
-        android:layout_marginTop="22dp"
-        android:text="Free Throw"
-        app:layout_constraintTop_toBottomOf="@+id/threePntsB"
-        tools:layout_editor_absoluteX="217dp" />
+        android:layout_marginLeft="56dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="24dp"
+        android:onClick="freethrowB"
+        android:text="@string/freeThroww"
+        app:layout_constraintStart_toEndOf="@+id/freeThrwA"
+        app:layout_constraintTop_toBottomOf="@+id/threePntsB" />
+
+    <TextView
+        android:id="@+id/opponentA"
+        android:layout_width="54dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="352dp"
+        android:layout_marginEnd="240dp"
+        android:layout_marginRight="240dp"
+        android:textSize="32sp"
+        android:text="0"
+        android:onClick="twoPoints"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
 
 
 </android.support.constraint.ConstraintLayout>
